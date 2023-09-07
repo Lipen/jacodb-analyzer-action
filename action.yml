@@ -1,15 +1,12 @@
-name: 'Hello World'
-description: 'Greet someone and record the time'
-inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
-    required: true
-    default: 'World'
-outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+name: 'JacoDB analyzer'
+description: 'JacoDB analyzer implementing IFDS algorithm'
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: docker
+  image: Dockerfile
   args:
-    - ${{ inputs.who-to-greet }}
+    - ${{ inputs.args }}
+inputs:
+  args:
+    description: Arguments for the analyzer
+    required: false
+    default: --help
