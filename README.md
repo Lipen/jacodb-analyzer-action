@@ -1,0 +1,1 @@
+# JacoDB analyzer GitHub Action
